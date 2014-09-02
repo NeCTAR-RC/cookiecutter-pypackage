@@ -1,0 +1,5 @@
+python-{{ cookiecutter.repo_name }} ({{ cookiecutter.version }}-1) unstable; urgency=low
+
+  * Initial release
+
+ -- {{ cookiecutter.full_name }} <{{ cookiecutter.email }}> Tue, 02 Sep 2014 11:10:00 +1000
