@@ -1,4 +1,4 @@
-Source: python-{{ cookiecutter.repo_name }}
+Source: python-{{ cookiecutter.repo_name|replace('_', '-') }}
 Section: unknown
 Priority: optional
 Maintainer: {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 9), python-all (>= 2.6), python-setuptools
 Standards-Version: 3.9.5
 Homepage: https://github.com/NeCTAR-RC/{{ cookiecutter.repo_name }}
 
-Package: python-{{ cookiecutter.repo_name }}
+Package: python-{{ cookiecutter.repo_name|replace('_', '-') }}
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, ${python:Depends}
 Description: {{ cookiecutter.project_short_description }}

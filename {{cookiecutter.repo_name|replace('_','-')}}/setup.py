@@ -15,10 +15,6 @@ requirements = [
     # TODO: put package requirements here
 ]
 
-test_requirements = [
-    # TODO: put package test requirements here
-]
-
 setup(
     name='{{ cookiecutter.repo_name }}',
     version='{{ cookiecutter.version }}',
@@ -26,7 +22,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
-    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}',
+    url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name|replace('_', '-') }}',
     packages=[
         '{{ cookiecutter.repo_name }}',
     ],
@@ -49,6 +45,4 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    test_suite='tests',
-    tests_require=test_requirements
 )

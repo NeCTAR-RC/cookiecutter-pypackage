@@ -1,9 +1,9 @@
 {
-	"full_name": "",
-	"email": "",
+	"full_name": "Mr Boilerplate",
+	"email": "support@rc.nectar.org.au",
 	"github_username": "NeCTAR-RC",
-	"project_name": "",
-	"repo_name": "boilerplate",
+	"project_name": "NeCTAR Boilerplate",
+	"repo_name": "nectar_boilerplate",
 	"project_short_description": "",
 	"release_date": "2014-01-11",
 	"year": "2014",
