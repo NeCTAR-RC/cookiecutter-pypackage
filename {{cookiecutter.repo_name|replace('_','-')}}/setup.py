@@ -7,13 +7,11 @@ try:
 except ImportError:
     from distutils.core import setup
 
+from pip.req import parse_requirements
 
 readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
-
-requirements = [
-    # TODO: put package requirements here
-]
+requirements = parse_requirements("requirements.txt")
 
 setup(
     name='{{ cookiecutter.repo_name }}',
@@ -29,7 +27,7 @@ setup(
     package_dir={'{{ cookiecutter.repo_name }}':
                  '{{ cookiecutter.repo_name }}'},
     include_package_data=True,
-    install_requires=requirements,
+    install_requires=[str(r.req) for r in requirements],
     license="GPLv3+",
     zip_safe=False,
     keywords='{{ cookiecutter.repo_name }}',
